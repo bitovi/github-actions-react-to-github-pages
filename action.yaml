@@ -8,6 +8,12 @@ inputs:
     description: 'Specifies if this action should checkout the code'
     required: false
     default: 'true'
+outputs:
+  page_url:
+    description: "The URL of the page"
+    value: ${{ steps.deploy.outputs.page_url }}
+
+  
 
 runs:
   using: 'composite'
@@ -30,7 +36,8 @@ runs:
       with: 
         path: /dist
 
-    - name: Deploy to GitHub Pages
+    - id: deploy
+      name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v1
       with:
         token: ${{ github.token }}
