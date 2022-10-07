@@ -34,7 +34,7 @@ runs:
     - name: 'upload'
       uses: actions/upload-pages-artifact@v1.0.4
       with: 
-        path: /dist
+        path: dist
 
     - id: deploy
       name: Deploy to GitHub Pages
