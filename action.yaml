@@ -1,4 +1,4 @@
-name: 'Deploy React code to GitHub Pages'
+name: 'Deploy React to GitHub Pages'
 description: 'Build and deploy react code to GitHub pages'
 branding:
   icon: upload-cloud
