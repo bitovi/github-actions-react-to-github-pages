@@ -1,19 +1,20 @@
 # React to GitHub Pages
 
-GitHub action to build and deploy React to GitHub Pages.
+GitHub action to build and deploy React to GitHub Pages.  This uses the new GitHub Actions method as the source.  In the repository settings, go to Pages.  Under Source, select GitHub Actions.  No further configuration is needed.  
 
 ## Customizing
 
 ### Inputs
 
-Following inputs can be used as `step.with` keys
+The following inputs can be used as `step.with` keys
 
 | Name             | Type    | Description                        |
 |------------------|---------|------------------------------------|
-| `checkout`          | T/F  | Set to `false` if the code is already checkedout (Default is `true`) |
-
+| `checkout`          | T/F  | Set to `false` if the code is already checked out (Default is `true`) (Optional) |
 
 ## Example usage
+
+Create `.github/workflow/deploy.yaml` with the following to build on push.
 
 ```yaml
 on:
@@ -27,8 +28,6 @@ jobs:
     steps:
     - id: build-publish
       uses: bitovi/github-actions-react-to-ghp@v1.0.0
-      with:
-        checkout: 'true'
 
 ```
 
