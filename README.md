@@ -25,6 +25,12 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
     - id: build-publish
       uses: bitovi/github-actions-react-to-ghp@v1.0.0
