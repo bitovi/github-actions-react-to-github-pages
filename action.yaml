@@ -10,7 +10,7 @@ inputs:
     default: 'true'
   path:
     description: 'Specifies the path of the static assets after building'
-    required: true
+    required: false
     default: 'dist'
 outputs:
   page_url:
