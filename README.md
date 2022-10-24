@@ -21,17 +21,19 @@ Create `.github/workflow/deploy.yaml` with the following to build on push.
 on:
   push:
     branches:
-      - 'main'
+      - "main"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
+  deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.build-publish.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
     - id: build-publish
       uses: bitovi/github-actions-react-to-ghp@v1.1.1
