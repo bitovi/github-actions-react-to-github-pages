@@ -33,7 +33,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
     - id: build-publish
-      uses: bitovi/github-actions-react-to-ghp@v1.0.0
+      uses: bitovi/github-actions-react-to-ghp@v1.1.0
 
 ```
 
