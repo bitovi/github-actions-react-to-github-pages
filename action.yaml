@@ -8,6 +8,10 @@ inputs:
     description: 'Specifies if this action should checkout the code'
     required: false
     default: 'true'
+  path:
+    description: 'Specifies the path of the static assets after building'
+    required: true
+    default: 'build/'
 outputs:
   page_url:
     description: "The URL of the page"
@@ -34,7 +38,7 @@ runs:
     - name: 'upload'
       uses: actions/upload-pages-artifact@v1.0.4
       with: 
-        path: dist
+        path: ${{ inputs.path }}
 
     - id: deploy
       name: Deploy to GitHub Pages
