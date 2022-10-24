@@ -11,6 +11,7 @@ The following inputs can be used as `step.with` keys
 | Name             | Type    | Description                        |
 |------------------|---------|------------------------------------|
 | `checkout`          | T/F  | Set to `false` if the code is already checked out (Default is `true`) (Optional) |
+| `path` | String | Path of output files, Default is `dist` (Optional)|
 
 ## Example usage
 
@@ -33,7 +34,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
     - id: build-publish
-      uses: bitovi/github-actions-react-to-ghp@v1.1.0
+      uses: bitovi/github-actions-react-to-ghp@v1.1.1
+        path: dist
 
 ```
 

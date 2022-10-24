@@ -11,7 +11,7 @@ inputs:
   path:
     description: 'Specifies the path of the static assets after building'
     required: true
-    default: 'build/'
+    default: 'dist'
 outputs:
   page_url:
     description: "The URL of the page"
