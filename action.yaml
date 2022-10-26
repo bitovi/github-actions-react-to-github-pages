@@ -12,6 +12,10 @@ inputs:
     description: 'Specifies the path of the static assets after building'
     required: false
     default: 'dist'
+  build_command:
+    description: 'Specifies the command to run after npm ci for the build'
+    required: false
+    default: 'npm run build'
 outputs:
   page_url:
     description: "The URL of the page"
@@ -32,7 +36,7 @@ runs:
       run: |
         echo "::group::Build"
         npm ci
-        npm run build
+        ${{ inputs.build_command }}
         echo "::endgroup::"
 
     - name: 'upload'

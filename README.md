@@ -12,6 +12,7 @@ The following inputs can be used as `step.with` keys
 |------------------|---------|------------------------------------|
 | `checkout`          | T/F  | Set to `false` if the code is already checked out (Default is `true`) (Optional) |
 | `path` | String | Path of output files, Default is `dist` (Optional)|
+| `build_command` | String | Specifies the command to run after `npm ci` for the build, Default is `npm run build` (Optional)|
 
 ## Example usage
 
