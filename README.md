@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: build-publish
-      uses: bitovi/github-actions-react-to-ghp@v1.1.1
+      uses: bitovi/github-actions-react-to-ghp@v1.2.0
         path: dist
 
 ```
