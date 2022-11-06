@@ -38,6 +38,7 @@ jobs:
     steps:
     - id: build-publish
       uses: bitovi/github-actions-react-to-ghp@v1.2.0
+      with:
         path: dist
 
 ```
