@@ -22,7 +22,7 @@ Create `.github/workflow/deploy.yaml` with the following to build on push.
 on:
   push:
     branches:
-      - "main"
+      - "master" # change to the branch you wish to deploy from
 
 permissions:
   contents: read
@@ -39,7 +39,7 @@ jobs:
     - id: build-publish
       uses: bitovi/github-actions-react-to-ghp@v1.2.0
       with:
-        path: dist
+        path: build # change to your build folder
 
 ```
 
