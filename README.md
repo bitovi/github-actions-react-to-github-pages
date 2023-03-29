@@ -22,7 +22,7 @@ Create `.github/workflow/deploy.yaml` with the following to build on push.
 on:
   push:
     branches:
-      - "master" # change to the branch you wish to deploy from
+      - "main" # change to the branch you wish to deploy from
 
 permissions:
   contents: read
