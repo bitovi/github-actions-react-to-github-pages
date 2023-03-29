@@ -16,7 +16,7 @@ The following inputs can be used as `step.with` keys
 
 ## Example usage
 
-Create `.github/workflow/deploy.yaml` with the following to build on push.
+Create `.github/workflows/deploy.yaml` with the following to build on push.
 
 ```yaml
 on:
