@@ -1,8 +1,17 @@
-# React to GitHub Pages
+# Deploy React to GitHub Pages 
 
 `bitovi/github-actions-react-to-github-pages` builds and deploys a React application to GitHub Pages.
 
 This action uses the [new GitHub Actions](https://www.bitovi.com/blog/deploy-your-react-project-to-github-pages-with-github-actions#DeployyourReactprojecttoGitHubPageswithGitHubActions-What%E2%80%99sNewwithGitHubPages) publishing method which allows you to create an artifact that contains the result of the build and serves the files in the artifact on the Pages site. There’s no need to check files back into your repository, keeping it nice and clean.
+
+
+## You are here
+This action deploys React/Javascript to Github Pages.  The build process should create static files and put them into a build direcory that will be moved into your Pages hosting location.  
+
+If you would like to deploy a backend app/service, check out our other actions:
+| Action | Purpose |
+| ------ | ------- |
+| [Deploy Docker to EC2](https://github.com/bitovi/github-actions-deploy-docker-to-ec2) | Deploys a repo with a Dockerized application to a virtual machine (EC2) on AWS |
 
 # Need help or have questions?
 This project is supported by [Bitovi, A DevOps consultancy](https://www.bitovi.com/services/devops-consulting).
