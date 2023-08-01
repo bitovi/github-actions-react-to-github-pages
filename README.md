@@ -2,6 +2,16 @@
 
 GitHub action to build and deploy React to GitHub Pages.  This uses the new GitHub Actions method as the source.  In the repository settings, go to Pages.  Under Source, select GitHub Actions.  No further configuration is needed.  
 
+## Need help or have questions?
+This project is supported by [Bitovi, A DevOps consultancy](https://www.bitovi.com/services/devops-consulting).
+
+You can **get help or ask questions** on our:
+
+- [Discord Community](https://discord.gg/J7ejFsZnJ4)!
+
+
+Or, you can hire us for training, consulting, or development. [Set up a free consultation](https://www.bitovi.com/services/devops-consulting).
+
 ## Customizing
 
 ### Inputs
@@ -37,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: build-publish
-      uses: bitovi/github-actions-react-to-ghp@v1.2.0
+      uses: bitovi/github-actions-react-to-github-pages@v1.2.0
       with:
         path: build # change to your build folder
 
@@ -45,15 +55,12 @@ jobs:
 
 
 ## Contributing
-We would love for you to contribute to [`bitovi/github-actions-react-to-ghp`](hhttps://github.com/bitovi/github-actions-react-to-ghp).   [Issues](https://github.com/bitovi/github-actions-react-to-ghp/issues) and [Pull Requests](https://github.com/bitovi/github-actions-react-to-ghp/pulls) are welcome!
+We would love for you to contribute to [`bitovi/github-actions-react-to-github-pages`](hhttps://github.com/bitovi/github-actions-react-to-github-pages).   [Issues](https://github.com/bitovi/github-actions-react-to-github-pages/issues) and [Pull Requests](https://github.com/bitovi/github-actions-react-to-github-pages/pulls) are welcome!
 
 ## License
-The scripts and documentation in this project are released under the [MIT License](https://github.com/bitovi/github-actions-react-to-ghp/blob/main/LICENSE).
+The scripts and documentation in this project are released under the [MIT License](https://github.com/bitovi/github-actions-react-to-github-pages/blob/main/LICENSE).
 
 ## Provided by Bitovi
 [Bitovi](https://www.bitovi.com/) is a proud supporter of Open Source software.
 
-## Need help or have questions?
-You can **get help or ask questions** on [Discord channel](https://discord.gg/J7ejFsZnJ4)! Come hangout with us!
 
-Or, you can hire us for training, consulting, or development. [Set up a free consultation](https://www.bitovi.com/devops-consulting).
