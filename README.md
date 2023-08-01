@@ -12,6 +12,7 @@ If you would like to deploy a backend app/service, check out our other actions:
 | Action | Purpose |
 | ------ | ------- |
 | [Deploy Docker to EC2](https://github.com/bitovi/github-actions-deploy-docker-to-ec2) | Deploys a repo with a Dockerized application to a virtual machine (EC2) on AWS |
+| [Deploy static site to AWS (S3/CDN/R53](https://github.com/marketplace/actions/deploy-static-site-to-aws-s3-cdn-r53) | Hosts a static site in AWS S3 with CloudFront |
 
 # Need help or have questions?
 This project is supported by [Bitovi, A DevOps consultancy](https://www.bitovi.com/services/devops-consulting).
