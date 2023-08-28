@@ -12,8 +12,12 @@ inputs:
     description: 'Specifies the path of the static assets after building'
     required: false
     default: 'dist'
+  install_command:
+    description: 'Specifies the command to run the installation.'
+    required: false
+    default: 'npm ci'
   build_command:
-    description: 'Specifies the command to run after npm ci for the build'
+    description: 'Specifies the command to run after the install command for the build'
     required: false
     default: 'npm run build'
 outputs:
@@ -21,7 +25,6 @@ outputs:
     description: "The URL of the page"
     value: ${{ steps.deploy.outputs.page_url }}
 
-  
 
 runs:
   using: 'composite'
@@ -35,7 +38,7 @@ runs:
       shell: bash
       run: |
         echo "::group::Build"
-        npm ci
+        ${{ inputs.install_command }}
         ${{ inputs.build_command }}
         echo "::endgroup::"
 
