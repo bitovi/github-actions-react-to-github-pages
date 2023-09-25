@@ -20,6 +20,10 @@ inputs:
     description: 'Specifies the command to run after the install command for the build'
     required: false
     default: 'npm run build'
+  caching:
+    description: 'Specifies if the action should cache npm dependencies.'
+    required: false
+    default: false
 outputs:
   page_url:
     description: "The URL of the page"
@@ -33,6 +37,12 @@ runs:
     - name: Checkout if required
       if: ${{ inputs.checkout == 'true' }}
       uses: actions/checkout@v3
+      
+    - name: 'Setup caching if required'
+      if: ${{ inputs.caching == 'true' }}
+      uses: actions/setup-node@v3
+      with:
+        cache: npm
 
     - name: 'Build'
       shell: bash
