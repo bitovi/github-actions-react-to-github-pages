@@ -69,6 +69,7 @@ The following inputs can be used as `step.with` keys
 | `path` | String | Path of output files, Default is `dist` (Optional)|
 | `install_command` | String | 'Specifies the command to run the installation. Default is `npm ci`. (Optional) |
 | `build_command` | String | Specifies the command to run after `npm ci` for the build, Default is `npm run build` (Optional)|
+| `caching` | T/F | Set to `true` if you want to cache npm dependencies (Default is `false`) (Optional) |
 
 # Customizing
 
@@ -118,7 +119,7 @@ jobs:
 - [Deploy Your React Project to Github Pages with Github Actions](https://www.bitovi.com/blog/deploy-your-react-project-to-github-pages-with-github-actions)
 
 ## Contributing
-We would love for you to contribute to [`bitovi/github-actions-react-to-github-pages`](hhttps://github.com/bitovi/github-actions-react-to-github-pages).   [Issues](https://github.com/bitovi/github-actions-react-to-github-pages/issues) and [Pull Requests](https://github.com/bitovi/github-actions-react-to-github-pages/pulls) are welcome!
+We would love for you to contribute to [`bitovi/github-actions-react-to-github-pages`](https://github.com/bitovi/github-actions-react-to-github-pages).   [Issues](https://github.com/bitovi/github-actions-react-to-github-pages/issues) and [Pull Requests](https://github.com/bitovi/github-actions-react-to-github-pages/pulls) are welcome!
 
 ## License
 The scripts and documentation in this project are released under the [MIT License](https://github.com/bitovi/github-actions-react-to-github-pages/blob/main/LICENSE).
@@ -127,4 +128,4 @@ The scripts and documentation in this project are released under the [MIT Licens
 [Bitovi](https://www.bitovi.com/) is a proud supporter of Open Source software.
 
 # We want to hear from you.
-Come chat with us about open source in our Bitovi community [Discord](https://discord.gg/J7ejFsZnJ4Z!
+Come chat with us about open source in our Bitovi community [Discord](https://discord.gg/J7ejFsZnJ4Z)!
