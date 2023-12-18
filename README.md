@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: build-publish
-      uses: bitovi/github-actions-react-to-github-pages@v1.2.0
+      uses: bitovi/github-actions-react-to-github-pages@v1.2.2
       with:
         path: build # change to your build folder
 ```
@@ -111,7 +111,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - id: build-publish
-        uses: bitovi/github-actions-react-to-github-pages@v1.2.0
+        uses: bitovi/github-actions-react-to-github-pages@v1.2.2
         with:
           path: build # change to your build folder
   ```
