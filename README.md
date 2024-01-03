@@ -3,16 +3,19 @@
 `bitovi/github-actions-react-to-github-pages` builds and deploys a React application to GitHub Pages.
 
 This action uses the [new GitHub Actions](https://www.bitovi.com/blog/deploy-your-react-project-to-github-pages-with-github-actions#DeployyourReactprojecttoGitHubPageswithGitHubActions-What%E2%80%99sNewwithGitHubPages) publishing method which allows you to create an artifact that contains the result of the build and serves the files in the artifact on the Pages site. There’s no need to check files back into your repository, keeping it nice and clean.
-
-
-## You are here
+![alt](https://bitovi-gha-pixel-tracker-deployment-main.bitovi-sandbox.com/pixel/P767_UznW_lSAbZZOhPj-)
+## Action Summary
 This action deploys React/Javascript to Github Pages.  The build process should create static files and put them into a build direcory that will be moved into your Pages hosting location.  
 
 If you would like to deploy a backend app/service, check out our other actions:
 | Action | Purpose |
 | ------ | ------- |
-| [Deploy Docker to EC2](https://github.com/bitovi/github-actions-deploy-docker-to-ec2) | Deploys a repo with a Dockerized application to a virtual machine (EC2) on AWS |
-| [Deploy static site to AWS (S3/CDN/R53](https://github.com/marketplace/actions/deploy-static-site-to-aws-s3-cdn-r53) | Hosts a static site in AWS S3 with CloudFront |
+| [Deploy Docker to EC2](https://github.com/marketplace/actions/deploy-docker-to-aws-ec2) | Deploys a repo with a Dockerized application to a virtual machine (EC2) on AWS |
+| [Deploy Storybook to GitHub Pages](https://github.com/marketplace/actions/deploy-storybook-to-github-pages) | Builds and deploys a Storybook application to GitHub Pages. |
+| [Deploy static site to AWS (S3/CDN/R53)](https://github.com/marketplace/actions/deploy-static-site-to-aws-s3-cdn-r53) | Hosts a static site in AWS S3 with CloudFront |
+<br/>
+
+**And more!**, check our [list of actions in the GitHub marketplace](https://github.com/marketplace?category=&type=actions&verification=&query=bitovi)
 
 # Need help or have questions?
 This project is supported by [Bitovi, A DevOps consultancy](https://www.bitovi.com/services/devops-consulting).
@@ -45,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: build-publish
-      uses: bitovi/github-actions-react-to-github-pages@v1.2.0
+      uses: bitovi/github-actions-react-to-github-pages@v1.2.2
       with:
         path: build # change to your build folder
 ```
@@ -109,7 +112,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - id: build-publish
-        uses: bitovi/github-actions-react-to-github-pages@v1.2.0
+        uses: bitovi/github-actions-react-to-github-pages@v1.2.2
         with:
           path: build # change to your build folder
   ```
