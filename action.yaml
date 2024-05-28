@@ -8,6 +8,20 @@ inputs:
     description: 'Specifies if this action should checkout the code'
     required: false
     default: 'true'
+
+  checkout-filter:
+    description: Partially clone against a given filter. Overrides checkout-sparse-checkout if set. maps to actions/checkout inputs.checkout-filter
+    required: false
+
+  checkout-sparse-checkout:
+    description: Do a sparse checkout on given patterns. Each pattern should be separated with new lines. maps to actions/checkout inputs.sparse-checkout
+    required: false
+
+  checkout-sparse-checkout-cone-mode:
+    description: Specifies whether to use cone-mode when doing a sparse checkout. maps to actions/checkout inputs.sparse-checkout-cone-mode
+    required: false
+    default: true
+    
   path:
     description: 'Specifies the path of the static assets after building'
     required: false
@@ -37,6 +51,10 @@ runs:
     - name: Checkout if required
       if: ${{ inputs.checkout == 'true' }}
       uses: actions/checkout@v4
+      with:
+        filter: ${{ inputs.checkout-filter }}
+        sparse-checkout: ${{ inputs.checkout-sparse-checkout }}
+        sparse-checkout-cone-mode: ${{ inputs.checkout-sparse-checkout-cone-mode }}
       
     - name: 'Setup caching if required'
       if: ${{ inputs.caching == 'true' }}

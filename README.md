@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: build-publish
-      uses: bitovi/github-actions-react-to-github-pages@v1.2.2
+      uses: bitovi/github-actions-react-to-github-pages@v1.2.4
       with:
         path: build # change to your build folder
 ```
@@ -66,9 +66,27 @@ jobs:
 
 The following inputs can be used as `step.with` keys
 
+
+  checkout-filter:
+    description: Partially clone against a given filter. Overrides checkout-sparse-checkout if set. maps to actions/checkout inputs.checkout-filter
+    required: false
+
+  checkout-sparse-checkout:
+    description: Do a sparse checkout on given patterns. Each pattern should be separated with new lines. maps to actions/checkout inputs.sparse-checkout
+    required: false
+
+  checkout-sparse-checkout-cone-mode:
+    description: Specifies whether to use cone-mode when doing a sparse checkout. maps to actions/checkout inputs.sparse-checkout-cone-mode
+    required: false
+    default: true
+
+
 | Name             | Type    | Description                        |
 |------------------|---------|------------------------------------|
-| `checkout`          | T/F  | Set to `false` if the code is already checked out (Default is `true`) (Optional) |
+| `checkout`       | T/F  | Set to `false` if the code is already checked out (Default is `true`) (Optional) |
+| `checkout_filter`   | String | Partially clone against a given filter. Overrides checkout-sparse-checkout if set. Maps to [actions/checkout](https://github.com/actions/checkout) `inputs.checkout-filter` (Optional) |
+| `checkout_sparse_checkout` | T/F | Do a sparse checkout on given patterns. Each pattern should be separated with new lines. Maps to [actions/checkout](https://github.com/actions/checkout) `inputs.sparse-checkout` (Optional) |
+| `checkout_sparse_checkout_cone_mode` | T/F | Specifies whether to use cone-mode when doing a sparse checkout. Maps to [actions/checkout](https://github.com/actions/checkout) `inputs.sparse-checkout-cone-mode` (Optional) |
 | `path` | String | Path of output files, Default is `dist` (Optional)|
 | `install_command` | String | 'Specifies the command to run the installation. Default is `npm ci`. (Optional) |
 | `build_command` | String | Specifies the command to run after `npm ci` for the build, Default is `npm run build` (Optional)|
@@ -112,7 +130,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - id: build-publish
-        uses: bitovi/github-actions-react-to-github-pages@v1.2.2
+        uses: bitovi/github-actions-react-to-github-pages@v1.2.4
         with:
           path: build # change to your build folder
   ```
